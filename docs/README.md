@@ -65,7 +65,7 @@ model Pedido{
   cliente Cliente @relation(fields: [clienteId], references: [id])
 }
 ```
-- Como os modelos prontos no schema Realizar a migração
+- Como os modelos prontos no schema Realizar a migraçao
 ```bash
 npx prisma migrate dev --name init
-```
+```]
