@@ -65,7 +65,20 @@ model Pedido{
   cliente Cliente @relation(fields: [clienteId], references: [id])
 }
 ```
-- Como os modelos prontos no schema Realizar a migraçao
+- Como os modelos prontos no schema Realizar a migração
 ```bash
 npx prisma migrate dev --name init
-```]
+```
+- Caso seja necessário remover o banco de dados para testar a criação novamente
+    - Exclua a pasta migrations
+```bash
+prisma migrate reset
+```
+- Editar o .gitignore
+```js
+node_modules
+# Keep environment variables out of version control
+.env
+prisma/migrations
+package-lock.json
+```

@@ -9,7 +9,7 @@ datasource db {
 
 model Cliente{
   id Int @id @default(autoincrement())
-  cpf String? @db.VarChar(20)
+  cpf String? @db.VarChar(20) @unique
   nome String
   telefones Telefone[]
   pedidos Pedido[]
